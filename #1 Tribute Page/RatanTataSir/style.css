@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: beige;
+    min-height: 100vh;
+    border: 10px solid darkblue;
+}
+
+.content {
+    max-width: 90%; /* Changed from fixed 900px to 90% for responsiveness */
+    margin: 0 auto;
+    padding: 20px; /* Added padding for better spacing on smaller screens */
+}
+
+.top_section {
+    margin-top: 50px; /* Reduced margin for smaller screens */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center-align items */
+    text-align: center; /* Center-align text */
+}
+
+.top_section h1 {
+    font-size: 40px; /* Reduced font size for smaller screens */
+    font-weight: bold;
+    color: darkslategray;
+    text-transform: uppercase;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.top_section h4 {
+    font-size: 24px; /* Reduced font size for smaller screens */
+    font-weight: lighter;
+}
+
+.image_container {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 250px; /* Reduced size for smaller screens */
+    height: 260px; /* Reduced size for smaller screens */
+}
+
+.image_container img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about_section {
+    margin: 30px 0; /* Reduced margin for smaller screens */
+}
+
+.about_section h2 {
+    font-size: 50px; /* Reduced font size for smaller screens */
+    font-weight: 600;
+    margin-bottom: 15px; /* Reduced margin for smaller screens */
+    text-align: center; /* Center-align heading */
+}
+
+.about_section p {
+    font-size: 18px; /* Reduced font size for smaller screens */
+    line-height: 28px; /* Adjusted line height */
+    letter-spacing: 1px; /* Adjusted letter spacing */
+    text-align: justify;
+}
+
+footer {
+    margin: 30px 0; /* Reduced margin for smaller screens */
+}
+
+footer p {
+    font-style: oblique;
+    text-align: center; /* Center-align footer text */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .top_section {
+        flex-direction: row; /* Revert to horizontal layout on larger screens */
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: left; /* Revert text alignment */
+    }
+
+    .top_section h1 {
+        font-size: 50px; /* Revert to original font size */
+    }
+
+    .top_section h4 {
+        font-size: 30px; /* Revert to original font size */
+    }
+
+    .image_container {
+        width: 300px; /* Revert to original size */
+        height: 310px; /* Revert to original size */
+    }
+
+    .about_section h2 {
+        font-size: 70px; /* Revert to original font size */
+        text-align: left; /* Revert text alignment */
+    }
+
+    .about_section p {
+        font-size: 20px; /* Revert to original font size */
+        line-height: 30px; /* Revert to original line height */
+        letter-spacing: 1.2px; /* Revert to original letter spacing */
+    }
+
+    footer p {
+        text-align: end; /* Revert to original alignment */
+    }
+}
