@@ -47,4 +47,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typingAnimationElement.appendChild(cursorElement);
     type();
+
+    // Dropdown menu functionality
+    const dropdown = document.querySelector('.dropdown');
+    const menuIcon = dropdown ? dropdown.querySelector('.menu-icon') : null;
+    const dropdownMenu = dropdown ? dropdown.querySelector('.dropdown-menu') : null;
+
+    if (menuIcon && dropdownMenu) {
+        // Add event listener to the menu icon for mobile toggle
+        menuIcon.addEventListener('click', function () {
+            // Toggle the visibility of the dropdown menu
+            dropdownMenu.classList.toggle('show'); // Use classList.toggle instead of style manipulation
+        });
+    }
 });
