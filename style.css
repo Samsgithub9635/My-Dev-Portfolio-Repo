@@ -442,89 +442,122 @@ nav li {
 }
 
 /* Contact Section */
-/* Contact Section */
 #contact {
     background: var(--dark-color);
     border-bottom: 3px solid var(--lighting-color);
-    padding: 2rem 0;
-    /* Add padding to the top and bottom */
+    padding: 2rem 1rem; /* Reduce horizontal padding */
 }
 
+/* Ensure h2 does not collide with the about section */
 #contact h2 {
     font-size: clamp(2rem, 6vw, 4rem);
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0 1rem 0; /* Increased top padding */
     color: yellow;
 }
 
 #contact .container {
     height: auto;
-    /* Adjust height to auto for better responsiveness */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    /* Reduce gap for better spacing */
+    gap: 1.5rem; /* Reduced gap */
     justify-content: center;
     align-items: center;
-    /* Center content horizontally */
+    width: 100%;
 }
 
+/* Reduce margin in top and bottom sections */
 .top_contact,
 .bottom_contact {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    /* Add gap between contact items */
+    gap: 1.5rem; /* Reduce gap */
     flex-wrap: wrap;
-    /* Allow wrapping for smaller screens */
     width: 100%;
-    /* Ensure full width */
+    margin: 0; /* Remove extra margin */
 }
 
-.contact_way {
+/* Top contact - h3 beside icon */
+.top_contact .contact_way {
     display: flex;
     align-items: center;
-    /* Center items vertically */
     justify-content: center;
-    /* Center items horizontally */
     gap: 0.5rem;
-    /* Add gap between icon and text */
-    padding: 0.5rem 1rem;
-    /* Add padding for better spacing */
     background-color: rgba(255, 255, 255, 0.1);
-    /* Add a subtle background */
-    border-radius: 0.5rem;
-    /* Add rounded corners */
+    border-radius: 50%;
     transition: 0.3s ease-in-out;
-    /* Add transition for hover effect */
-    width: 100%;
-    /* Ensure the box takes full width */
-    max-width: 200px;
-    /* Limit the maximum width of the box */
     text-align: center;
-    /* Center text */
+    padding: 1.2rem;
+    width: 160px; /* Reduced size */
+    height: 160px;
+}
+
+/* Bottom contact - h3 below icon */
+.bottom_contact .contact_way {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    padding: 1.2rem;
+    width: 160px;
+    height: 160px;
 }
 
 .contact_way:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    /* Change background on hover */
     transform: scale(1.05);
-    /* Add a slight scale effect on hover */
 }
 
 .contact_way i {
-    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--secondary-color);
-    /* Add color to icons */
 }
 
 .contact_way h3 {
     font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: bold;
     color: white;
-    /* Ensure text color is white */
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #contact {
+        padding: 1.5rem 0.5rem; /* Reduce padding */
+    }
+
+    .contact_way {
+        width: 90px; /* Scale down */
+        height: 90px;
+        padding: 0.6rem;
+    }
+
+    .contact_way i {
+        font-size: 2.4rem; /* Reduce icon size */
+    }
+
+    .contact_way h3 {
+        font-size: 2.4rem; /* Reduce text size */
+    }
+
+    .top_contact,
+    .bottom_contact {
+        gap: 1rem; /* Reduce gap between items */
+        margin: 0; /* Remove unnecessary margin */
+    }
+
+    .top_contact .contact_way, .bottom_contact .contact_way {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+/* Footer Section */
 footer {
     background-color: var(--lighting-color);
     padding: 0.2rem;
